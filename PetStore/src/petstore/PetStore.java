@@ -73,7 +73,7 @@ public class PetStore {
 		ObjectOutputStream outputStream = null;
 		try {
 			outputStream = new ObjectOutputStream 
-					(new FileOutputStream("C:\\dados\\mercado.txt"));
+					(new FileOutputStream("c:\\temp\\petStore.dados"));
 			for (int i=0; i < mamiferos.size(); i++)
 				outputStream.writeObject(mamiferos.get(i));
 		} catch (FileNotFoundException ex) {
@@ -101,7 +101,7 @@ public class PetStore {
 
 		try {	
 			inputStream = new ObjectInputStream
-					(new FileInputStream("C:\\dados\\mercado.txt"));
+					(new FileInputStream("c:\\temp\\petStore.dados"));
 			Object obj = null;
 			while ((obj = inputStream.readObject()) != null) {
 				if (obj instanceof Mamifero) {
